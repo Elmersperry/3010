@@ -3,13 +3,12 @@
     <head>
         <meta charset="UTF-8">
         <title>Validity</title>
-        <script src="main.js" type="text/javascript"></script>
     </head>
     <body>
         <form>
             <p>
              <label for="pass_1">Введите пароль:</label>
-             <input type="password" name="pass_1" id="pass_1">
+             <input type="password" name="pass_1" id="pass_1" required>
             </p>
             <p>
              <label for="pass_2">Подтвердите пароль:</label>
@@ -20,4 +19,17 @@
             </p>
         </form>
     </body>
+    <script>
+        let p1 = document.querySelector("#pass_1").value;
+        let p2 = document.querySelector("#pass_2").value;
+        document.querySelector("#pass_2").addEventListener("change", validPass);
+function validPass() {
+    if(p2 != p1) {
+        console.log("hjhhjkh")
+    }
+    else {
+        console.log("jjj")
+    }
+};
+    </script>
 </html>
